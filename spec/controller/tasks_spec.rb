@@ -7,7 +7,7 @@ RSpec.describe TasksController, type: :controller do
       @task2 = create(:task)
     end
 
-		it "routes to index" do
+    it "routes to index" do
       {get: "/tasks"}.should route_to("tasks#index")
     end
 
