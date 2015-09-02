@@ -1,0 +1,35 @@
+<div class="paper">
+	<h1>Task List</h1>
+
+	<div class="list">
+		<% @tasks.each do |task| %>
+			<div class="task">
+				<%= form_for task, method: :put do |f| %>
+					<div class="check-container">
+						<%= f.check_box :complete %>
+					</div>
+					<%= f.text_field :name, class: "name-input" %>
+					<%= f.text_field :setting %>
+					<%= f.text_field :time %>
+					<%= f.submit "Update Task" %>
+				<% end %>
+				<%= button_to "Remove Task", task, method: :delete %>
+			</div>
+		<% end %>
+
+		<!-- <h3>New Task</h3> -->
+		<%= form_for Task.new, html: {class: "task"} do |f| %>
+			<div class="check-container"></div>
+			<%= f.text_field :name, placeholder: "Name", class: "name-input" %>
+			<%= f.text_field :setting, placeholder: "Setting" %>
+			<%= f.text_field :time, placeholder: "Time" %>
+			<%= f.submit "Create Task" %>
+		<% end %>
+	</div>
+
+	<div class="footer"></div>
+
+	<div class="line-divider"></div>
+	<div class="background-paper1"></div>
+	<div class="background-paper2"></div>
+</div>

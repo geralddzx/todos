@@ -1,0 +1,114 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.paper {
+	border: 1px solid #CCCCCC;
+	padding: 2px;
+	width: 90%;
+	position: relative;
+	margin: auto;
+	margin-top: 100px;
+	border-radius: 5px;
+	background: white;
+	box-shadow:0 4px 10px -4px #808080;
+
+	.line-divider {
+		height: 100%;
+		width: 75px;
+		border-right: 5px double #FFDCDC;
+		position: absolute;
+		top: 0px;
+    	left: 0px;
+	}
+
+	.background-paper1 {
+		position: absolute;
+		top: 1%;
+		left: 1%;
+		height: 100%;
+		width: 98%;
+		z-index: -1;
+		border: 1px solid #CCCCCC;
+		background: white;
+		box-shadow:0 4px 10px -4px #808080;
+	}
+
+	.background-paper2 {
+		background: white;
+		position: absolute;
+		top: 2%;
+		left: 2%;
+		height: 100%;
+		width: 96%;
+		z-index: -2;
+		border: 1px solid #CCCCCC;
+		box-shadow:0 4px 10px -4px #808080;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.check-container {
+		display: inline-block;
+		width: 50px;
+		margin-right: 30px;
+	}
+
+	.list {
+		border-top: 5px double #FFDCDC;
+
+		input {
+			font-size: 20px;
+		}
+
+		form {
+			display: inline-block;
+
+			input[type=text] {
+				border: none;
+
+				&:focus {
+					outline: 0;
+				}
+			}
+
+			input[type=checkbox] {
+				width: 30px;
+				height: 30px;
+				border: 1px solid #4DB8FF;
+				vertical-align: middle;
+				height: 40px;
+			}
+
+			input[type=submit] {
+				padding: 10px;
+			}
+		}
+
+		.task {
+			padding: 20px;
+			border-bottom: 1px solid #CCCCCC;
+
+			.name-input {
+				width: 400px;
+			}
+
+			input {
+				margin-right: 15px;
+			}
+		}
+
+		#new_task {
+			display: block;
+		}
+	}
+
+	.footer {
+		height: 75px;
+	}
+}
+
+
+
